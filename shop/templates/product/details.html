@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+
+    <!-- Specify fields to be displayed -->
+    {{ data.productname }}<br/>
+    <img src="{{ data.productimage }}" alt=""><br/>
+    <p>{{ data.productprice }}</p><br/>
+    <p>{{ data.productdescription }}</p><br/>
+    <p>{{ data.productquantity }}</p><br/>
+    <form action="/product/update/{{data.id}}" method="POST">
+        {% csrf_token %}
+        <select name="quantity" id="">
+            {% for i in range %}
+            <option value="{{ i }}"> {{ i }} </option>
+            {% endfor %}
+        </select>
+        <button type="submit">Buy</button>
+    </form>
+    <a href="/product">Go back </a>
+</div>
+</body>
+</html>
