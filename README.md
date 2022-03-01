@@ -1,4 +1,4 @@
-# rendu django Matthis blondin et Lucas Orsini
+# Rendu django Matthis blondin et Lucas Orsini
 
 ### Extension que nous utilisons pour notre projet
 
